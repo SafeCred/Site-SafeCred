@@ -198,13 +198,11 @@ export default function SafeCredLanding() {
         </div>
       )}
 
-      {/* Hero Section COM VÍDEO DE FUNDO */}
+      {/* Hero Section CORRIGIDA */}
       <section className="relative min-h-screen flex items-center pt-[88px]">
+        {/* Background e Vídeo */}
         <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#192442]/90 via-[#192442]/80 to-[#192442]/50 z-10" />
-        {/* Mudei os valores acima para você ver como fica mais transparente */}
-
-          {/* VÍDEO AQUI - Certifique-se que o arquivo 'seu-video.mp4' está na pasta public */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#192442]/90 via-[#192442]/80 to-[#192442]/50 z-10" />
           <video
             autoPlay
             loop
@@ -215,8 +213,20 @@ export default function SafeCredLanding() {
             <source src="/video-safecred.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="relative z-20 max-w-7xl mx-auto px-8 py-20">
-          <motion.div className="max-w-2xl" initial={fadeInUp.initial} whileInView={fadeInUp.whileInView} viewport={fadeInUp.viewport} transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}>
+        
+        {/* Container do Conteúdo */}
+        {/* ADICIONEI 'w-full' aqui embaixo para garantir que o container ocupe a largura */}
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-8 py-20">
+          
+          {/* Bloco de Texto */}
+          {/* ADICIONEI 'items-start' e 'text-left' para forçar a esquerda */}
+          <motion.div 
+            className="max-w-2xl flex flex-col items-start text-left"
+            initial={fadeInUp.initial} 
+            whileInView={fadeInUp.whileInView} 
+            viewport={fadeInUp.viewport} 
+            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+          >
             <motion.h1
               className="text-6xl font-light leading-tight mb-8 text-[#c9b173]"
               initial={{ opacity: 0, y: 40 }}
@@ -227,8 +237,9 @@ export default function SafeCredLanding() {
               <br />
               rápido e seguro.
             </motion.h1>
+            
             <motion.p
-              className="text-xl text-white/90 leading-relaxed mb-10 max-w-xl"
+              className="text-xl text-white/90 leading-relaxed mb-10 max-w-xl text-left" 
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -236,7 +247,9 @@ export default function SafeCredLanding() {
               Oferecemos empréstimos consignados sem burocracia, com taxas competitivas, liberação ágil e atendimento
               humano de verdade.
             </motion.p>
+            
             <motion.div
+              className="w-full flex justify-start" 
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
