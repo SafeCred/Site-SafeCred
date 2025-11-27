@@ -201,7 +201,8 @@ export default function SafeCredLanding() {
       {/* Hero Section COM VÍDEO DE FUNDO */}
       <section className="relative min-h-screen flex items-center pt-[88px]">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#192442] via-[#192442]/95 to-[#192442]/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#192442]/90 via-[#192442]/80 to-[#192442]/50 z-10" />
+        {/* Mudei os valores acima para você ver como fica mais transparente */}
 
           {/* VÍDEO AQUI - Certifique-se que o arquivo 'seu-video.mp4' está na pasta public */}
           <video
@@ -209,7 +210,7 @@ export default function SafeCredLanding() {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-100"
           >
             <source src="/video-safecred.mp4" type="video/mp4" />
           </video>
