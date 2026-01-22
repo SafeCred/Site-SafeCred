@@ -789,7 +789,7 @@ export default function SafeCredLanding() {
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/safecred/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#c9b173] hover:text-[#b8a165] transition-colors"
